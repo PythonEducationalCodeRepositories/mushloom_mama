@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golu Molu, Mushloom Mama, Be My Valentine? 💖</title>
+    <title>Golu Molu, MAMA, Be My Valentine? 💖</title>
     <style>
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-            background-color: #ffe6f2; /* Soft pastel pink background */
+            background-color: #ffe6f2; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -75,9 +75,9 @@
 </head>
 <body>
 
-    <h1>Golu Molu, Mushloom Mama, Be My Valentine? 💌</h1>
+    <h1>Golu Molu, MAMA, Be My Valentine? 💌</h1>
     <div class="container">
-        <p id="question">💖 Question 1: Do you like cute things, Mushloom Mama? 🐶🐱</p>
+        <p id="question">💖 Question 1: Do you like cute things, MAMA? 🐶🐱</p>
         <button id="yesBtn">Yes! 🥰</button>
         <button id="noBtn">No 🙄</button>
         <p id="response"></p>
@@ -85,20 +85,20 @@
 
     <script>
         const questions = [
-            "💖 Question 1: Do you like cute things, Mushloom Mama? 🐶🐱",
+            "💖 Question 1: Do you like cute things, MAMA? 🐶🐱",
             "🌸 Question 2: Do you like surprises, Golu Molu? 🎁",
-            "🍫 Question 3: Do you love chocolates, Mushloom Mama? 🍫😍",
+            "🍫 Question 3: Do you love chocolates, MAMA? 🍫😍",
             "🎵 Question 4: Can I sing you a love song, Golu Molu? 🎶😍",
-            "💘 Question 5: Would you hold my hand forever, Mushloom Mama? 🤝💖",
+            "💘 Question 5: Would you hold my hand forever, MAMA? 🤝💖",
             "🥰 Question 6: Do you think I'm adorable, Golu Molu? 😳💕"
         ];
         
         const funnyResponses = [
-            "Yay! I knew you loved cute things, Mushloom Mama! 🥺💖",
+            "Yay! I knew you loved cute things, MAMA! 🥺💖",
             "Awww, surprises are the best, right Golu Molu? 🎉",
-            "Chocolate is the best gift ever, right Mushloom Mama? 🍫😍",
+            "Chocolate is the best gift ever, right MAMA? 🍫😍",
             "I promise I won't sing off-key... maybe, Golu Molu! 🎤😂",
-            "Holding hands forever? Yes, please, Mushloom Mama! 🥰",
+            "Holding hands forever? Yes, please, MAMA! 🥰",
             "You're making me blush, Golu Molu! 😳❤️"
         ];
 
@@ -117,10 +117,10 @@
                     questionText.innerText = questions[index];
                 }, 6000);
             } else {
-                responseText.innerText = "💕 You passed the test, Mushloom Mama! Now I have something to say... 💕";
+                responseText.innerText = "💕 You passed the test, MAMA! Now I have something to say... 💕";
                 setTimeout(() => {
                     document.querySelector(".container").innerHTML = `
-                        <h2>😍 I LOVE YOU, GOLU MOLU & MUSHLOOM MAMA! 😍</h2>
+                        <h2>😍 I LOVE YOU, GOLU MOLU & MAMA! 😍</h2>
                         <p>You are my Valentine forever! 💖🥰</p>
                         <img src="https://media.tenor.com/VnPZtY8ry74AAAAj/love-cute.gif" width="200px">
                         <p>🌟 You are the sunshine in my life, the sparkle in my eyes, and the cutest human ever! 🌟</p>
@@ -135,11 +135,6 @@
             let y = Math.random() * 300 - 150;
             this.style.transform = `translate(${x}px, ${y}px)`;
         });
-
-        // Add snowfall effect
-        let script = document.createElement("script");
-        script.src = "https://cdn.jsdelivr.net/gh/scottschiller/snowstorm/snowstorm-min.js";
-        document.body.appendChild(script);
 
         // Create floating hearts effect
         function createHeart() {
