@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somya Mama, Be My Valentine? 💖</title>
+    <title>Mama, Be My Valentine? 💖</title>
     <style>
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -60,9 +60,9 @@
 </head>
 <body>
 
-    <h1>Somya Mama, Be My Valentine? 💌</h1>
+    <h1>Mama, Be My Valentine? 💌</h1>
     <div class="container">
-        <p id="question">💖 Question 1: Do you like cute things, Somya Mama? 🐶🐱</p>
+        <p id="question">💖 Question 1: Do you like cute things, Mama? 🐶🐱</p>
         <button id="yesBtn">Yes! 🥰</button>
         <button id="noBtn">No 🙄</button>
         <p id="response"></p>
@@ -70,21 +70,21 @@
 
     <script>
         const questions = [
-            "💖 Question 1: Do you like cute things, Somya Mama? 🐶🐱",
-            "🌸 Question 2: Do you like surprises, Somya Mama? 🎁",
-            "🍫 Question 3: Do you love chocolates, Somya Mama? 🍫😍",
-            "🎵 Question 4: Can I sing you a love song, Somya Mama? 🎶😍",
-            "💘 Question 5: Would you hold my hand forever, Somya Mama? 🤝💖",
-            "🥰 Question 6: Do you think I'm adorable, Somya Mama? 😳💕"
+            "💖 Question 1: Do you like cute things, Mama? 🐶🐱",
+            "🌸 Question 2: Do you like surprises, Mama? 🎁",
+            "🍫 Question 3: Do you love chocolates, Mama? 🍫😍",
+            "🎵 Question 4: Can I sing you a love song, Mama? 🎶😍",
+            "💘 Question 5: Would you hold my hand forever, Mama? 🤝💖",
+            "🥰 Question 6: Do you think I'm adorable, Mama? 😳💕"
         ];
         
         const funnyResponses = [
-            "Yay! I knew you loved cute things, Somya Mama! 🥺💖",
+            "Yay! I knew you loved cute things, Mama! 🥺💖",
             "Awww, surprises are the best, right? 🎉",
             "Chocolate is the best gift ever, right? 🍫😍",
             "I promise I won't sing off-key... maybe! 🎤😂",
-            "Holding hands forever? Yes, please, Somya Mama! 🥰",
-            "You're making me blush, Somya Mama! 😳❤️"
+            "Holding hands forever? Yes, please, Mama! 🥰",
+            "You're making me blush, Mama! 😳❤️"
         ];
 
         let index = 0;
@@ -102,10 +102,10 @@
                     questionText.innerText = questions[index];
                 }, 6000); // Doubled the time from 3000ms to 6000ms
             } else {
-                responseText.innerText = "💕 You passed the test, Somya Mama! Now I have something to say... 💕";
+                responseText.innerText = "💕 You passed the test, Mama! Now I have something to say... 💕";
                 setTimeout(() => {
                     document.querySelector(".container").innerHTML = `
-                        <h2>😍 I LOVE YOU, SOMYA MAMA! 😍</h2>
+                        <h2>😍 I LOVE YOU, MAMA! 😍</h2>
                         <p>You are my Valentine forever! 💖🥰</p>
                         <img src="https://media.tenor.com/VnPZtY8ry74AAAAj/love-cute.gif" width="200px">
                     `;
