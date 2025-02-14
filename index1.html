@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somya Mama, Be My Valentine? 💖</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            background-color: #ffb6c1; /* Soft pink background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        h1 {
+            color: #d32f2f;
+            font-size: 2.5em;
+            animation: heartbeat 1.5s infinite;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            background-color: #ff4081;
+            color: white;
+        }
+        #yesBtn {
+            background-color: #4caf50;
+        }
+        #question {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        #response {
+            font-size: 1.2em;
+            color: #d32f2f;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Somya Mama, Be My Valentine? 💌</h1>
+    <div class="container">
+        <p id="question">💖 Question 1: Do you like cute things, Somya Mama? 🐶🐱</p>
+        <button id="yesBtn">Yes! 🥰</button>
+        <button id="noBtn">No 🙄</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        const questions = [
+            "💖 Question 1: Do you like cute things, Somya Mama? 🐶🐱",
+            "🌸 Question 2: Do you like surprises, Somya Mama? 🎁",
+            "🍫 Question 3: Do you love chocolates, Somya Mama? 🍫😍",
+            "🎵 Question 4: Can I sing you a love song, Somya Mama? 🎶😍",
+            "💘 Question 5: Would you hold my hand forever, Somya Mama? 🤝💖",
+            "🥰 Question 6: Do you think I'm adorable, Somya Mama? 😳💕"
+        ];
+        
+        const funnyResponses = [
+            "Yay! I knew you loved cute things, Somya Mama! 🥺💖",
+            "Awww, surprises are the best, right? 🎉",
+            "Chocolate is the best gift ever, right? 🍫😍",
+            "I promise I won't sing off-key... maybe! 🎤😂",
+            "Holding hands forever? Yes, please, Somya Mama! 🥰",
+            "You're making me blush, Somya Mama! 😳❤️"
+        ];
+
+        let index = 0;
+        let responseText = document.getElementById("response");
+        let questionText = document.getElementById("question");
+        let yesBtn = document.getElementById("yesBtn");
+        let noBtn = document.getElementById("noBtn");
+
+        yesBtn.addEventListener("click", function() {
+            if (index < questions.length - 1) {
+                responseText.innerText = funnyResponses[index];
+                index++;
+                setTimeout(() => {
+                    responseText.innerText = "";
+                    questionText.innerText = questions[index];
+                }, 6000); // Doubled the time from 3000ms to 6000ms
+            } else {
+                responseText.innerText = "💕 You passed the test, Somya Mama! Now I have something to say... 💕";
+                setTimeout(() => {
+                    document.querySelector(".container").innerHTML = `
+                        <h2>😍 I LOVE YOU, SOMYA MAMA! 😍</h2>
+                        <p>You are my Valentine forever! 💖🥰</p>
+                        <img src="https://media.tenor.com/VnPZtY8ry74AAAAj/love-cute.gif" width="200px">
+                    `;
+                }, 8000); // Increased the final delay for better effect
+            }
+        });
+
+        noBtn.addEventListener("mouseover", function() {
+            let x = Math.random() * 300 - 150; 
+            let y = Math.random() * 300 - 150;
+            this.style.transform = `translate(${x}px, ${y}px)`;
+        });
+
+        // Add snowfall effect from GitHub
+        let script = document.createElement("script");
+        script.src = "https://cdn.jsdelivr.net/gh/scottschiller/snowstorm/snowstorm-min.js";
+        document.body.appendChild(script);
+    </script>
+
+</body>
+</html>
