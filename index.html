@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mama, Be My Valentine? 💖</title>
+    <title>Golu Molu, Mushloom Mama, Be My Valentine? 💖</title>
     <style>
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             text-align: center;
-            background-color: #ffb6c1; /* Soft pink background */
+            background-color: #ffe6f2; /* Soft pastel pink background */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
             overflow: hidden;
+            position: relative;
         }
         h1 {
             color: #d32f2f;
-            font-size: 2.5em;
+            font-size: 3em;
             animation: heartbeat 1.5s infinite;
         }
         @keyframes heartbeat {
@@ -30,7 +31,7 @@
             background: white;
             padding: 20px;
             border-radius: 15px;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.4);
             max-width: 400px;
         }
         button {
@@ -41,11 +42,13 @@
             cursor: pointer;
             border-radius: 5px;
             transition: all 0.3s ease;
-            background-color: #ff4081;
             color: white;
         }
         #yesBtn {
-            background-color: #4caf50;
+            background-color: #ff69b4;
+        }
+        #noBtn {
+            background-color: #ff4081;
         }
         #question {
             font-size: 1.5em;
@@ -56,13 +59,25 @@
             color: #d32f2f;
             margin-top: 15px;
         }
+        .floating-heart {
+            position: absolute;
+            color: #ff4081;
+            font-size: 2em;
+            opacity: 0.8;
+            animation: float 5s linear infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-50px) scale(1.2); }
+            100% { transform: translateY(-100px) scale(1); }
+        }
     </style>
 </head>
 <body>
 
-    <h1>Mama, Be My Valentine? 💌</h1>
+    <h1>Golu Molu, Mushloom Mama, Be My Valentine? 💌</h1>
     <div class="container">
-        <p id="question">💖 Question 1: Do you like cute things, Mama? 🐶🐱</p>
+        <p id="question">💖 Question 1: Do you like cute things, Mushloom Mama? 🐶🐱</p>
         <button id="yesBtn">Yes! 🥰</button>
         <button id="noBtn">No 🙄</button>
         <p id="response"></p>
@@ -70,21 +85,21 @@
 
     <script>
         const questions = [
-            "💖 Question 1: Do you like cute things, Mama? 🐶🐱",
-            "🌸 Question 2: Do you like surprises, Mama? 🎁",
-            "🍫 Question 3: Do you love chocolates, Mama? 🍫😍",
-            "🎵 Question 4: Can I sing you a love song, Mama? 🎶😍",
-            "💘 Question 5: Would you hold my hand forever, Mama? 🤝💖",
-            "🥰 Question 6: Do you think I'm adorable, Mama? 😳💕"
+            "💖 Question 1: Do you like cute things, Mushloom Mama? 🐶🐱",
+            "🌸 Question 2: Do you like surprises, Golu Molu? 🎁",
+            "🍫 Question 3: Do you love chocolates, Mushloom Mama? 🍫😍",
+            "🎵 Question 4: Can I sing you a love song, Golu Molu? 🎶😍",
+            "💘 Question 5: Would you hold my hand forever, Mushloom Mama? 🤝💖",
+            "🥰 Question 6: Do you think I'm adorable, Golu Molu? 😳💕"
         ];
         
         const funnyResponses = [
-            "Yay! I knew you loved cute things, Mama! 🥺💖",
-            "Awww, surprises are the best, right? 🎉",
-            "Chocolate is the best gift ever, right? 🍫😍",
-            "I promise I won't sing off-key... maybe! 🎤😂",
-            "Holding hands forever? Yes, please, Mama! 🥰",
-            "You're making me blush, Mama! 😳❤️"
+            "Yay! I knew you loved cute things, Mushloom Mama! 🥺💖",
+            "Awww, surprises are the best, right Golu Molu? 🎉",
+            "Chocolate is the best gift ever, right Mushloom Mama? 🍫😍",
+            "I promise I won't sing off-key... maybe, Golu Molu! 🎤😂",
+            "Holding hands forever? Yes, please, Mushloom Mama! 🥰",
+            "You're making me blush, Golu Molu! 😳❤️"
         ];
 
         let index = 0;
@@ -100,16 +115,18 @@
                 setTimeout(() => {
                     responseText.innerText = "";
                     questionText.innerText = questions[index];
-                }, 6000); // Doubled the time from 3000ms to 6000ms
+                }, 6000);
             } else {
-                responseText.innerText = "💕 You passed the test, Mama! Now I have something to say... 💕";
+                responseText.innerText = "💕 You passed the test, Mushloom Mama! Now I have something to say... 💕";
                 setTimeout(() => {
                     document.querySelector(".container").innerHTML = `
-                        <h2>😍 I LOVE YOU, MAMA! 😍</h2>
+                        <h2>😍 I LOVE YOU, GOLU MOLU & MUSHLOOM MAMA! 😍</h2>
                         <p>You are my Valentine forever! 💖🥰</p>
                         <img src="https://media.tenor.com/VnPZtY8ry74AAAAj/love-cute.gif" width="200px">
+                        <p>🌟 You are the sunshine in my life, the sparkle in my eyes, and the cutest human ever! 🌟</p>
+                        <p>💕 Now give me a hug! 🤗💖</p>
                     `;
-                }, 8000); // Increased the final delay for better effect
+                }, 8000);
             }
         });
 
@@ -119,10 +136,25 @@
             this.style.transform = `translate(${x}px, ${y}px)`;
         });
 
-        // Add snowfall effect from GitHub
+        // Add snowfall effect
         let script = document.createElement("script");
         script.src = "https://cdn.jsdelivr.net/gh/scottschiller/snowstorm/snowstorm-min.js";
         document.body.appendChild(script);
+
+        // Create floating hearts effect
+        function createHeart() {
+            let heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.classList.add("floating-heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+        setInterval(createHeart, 700);
     </script>
 
 </body>
